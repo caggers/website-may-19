@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { sectionsArray } from './util/data';
 import { useWindowSize } from './hooks/Window';
+import { SectionObj } from './util/interfaces'
 
 import {
 	AnimatedBG,
@@ -25,6 +26,7 @@ const SplashWrapper = styled.div`
 	grid-row: 1 / 1;
 	width: 80%;
 	margin: 5rem auto;
+  height: 100vh;
 `;
 
 const ProfileWrapper = styled.div`
@@ -61,7 +63,8 @@ const SocialWrapper = styled.div`
 
 const Home = () => {
 	const window = useWindowSize();
-	const [isMobile, setIsMobile] = React.useState();
+  const [isMobile, setIsMobile] = React.useState();
+  const sectionsArr: Array<SectionObj> = sectionsArray
 
 	React.useEffect(() => {
 		setIsMobile(window.width <= 780);
@@ -75,10 +78,10 @@ const Home = () => {
 			{sectionsArray ? (
 				<>
 					<ProfileWrapper>
-						<Profile data={sectionsArray[0]} isMobile={isMobile} />
+						<Profile data={sectionsArr[0]} isMobile={isMobile} />
 					</ProfileWrapper>
 					<ExperienceWrapper>
-						<Experience data={sectionsArray[1]} isMobile={isMobile} />
+						<Experience data={sectionsArr[1]} isMobile={isMobile} />
 					</ExperienceWrapper>
 					<AnimationWrapper>
 						<AnimatedBG />

@@ -4,13 +4,13 @@ import styled, { css } from 'styled-components';
 import SectionHeader from './section/Header';
 import { coderDojo } from '../images';
 import { blogsArray } from '../util/data';
-import { DataProps } from '../util/interfaces';
+import { SectionObj } from '../util/interfaces';
 
 interface Props {
 	title?: string;
 	icon?: string;
 	text?: string | Array<string>;
-	data?: DataProps;
+	data?: SectionObj;
 	isMobile?: boolean;
 }
 
@@ -71,13 +71,10 @@ const ExperienceBlogs = styled.div`
 `;
 
 const Experience = (props: Props) => {
-  // const { title, icon, text } = props.data;
-
-  const title= 'test'
-  const icon = ' test'
-  const text=['test']
+  const data: SectionObj = props.data
+  const { title, icon, text } = data;
+  const { isMobile } = props;
   
-	const { isMobile } = props;
 	return (
 		<ExperienceWrapper>
 			<ExperienceTitle isMobile={isMobile}>

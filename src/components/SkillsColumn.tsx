@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { DataProps } from '../util/interfaces';
+import { SkillsObj } from '../util/interfaces';
 
 interface Props {
-	data: DataProps;
+	data: SkillsObj;
 }
 
 const Wrapper = styled.div`
@@ -36,7 +36,7 @@ const SubTitle = styled.h4`
 `;
 
 const SkillsColumn = (props: Props) => {
-	const data: DataProps = props.data;
+	const data: SkillsObj = props.data;
   const { title, icon, subtitle, text } = data;
   const skills: Array<string> = data.skills || []
 

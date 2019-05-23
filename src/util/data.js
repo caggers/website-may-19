@@ -4,14 +4,12 @@ import { spaceman, telescope, rocket, twinkle, halfmoon, ufo } from '../images/i
 const profile = {
   title: 'Profile',
   subtitle: 'Front End Software Developer looking for new opportunities in Vancouver, Canada. My area of expertise lies in Javascript and React but I have passion for interface technologies beyond the browser.',
-  text: `
+  text: [`
         I am a maker at heart who is happiest covered head to toe in glitter, paint and LEDs.
         The most important thing for me is to work with smart and creative people who inspire me. 
         I genuinely enjoy peer programming and code reviews as part of a healthy and happy team.
-        A day in my perfect role would have lots of opportunities for collaboration with two way learning and teaching.  `,
+        A day in my perfect role would have lots of opportunities for collaboration with two way learning and teaching.  `],
   icon: spaceman,
-  isListing: false,
-  fullSize: true,
 };
 
 const experience = {

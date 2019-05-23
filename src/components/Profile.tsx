@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components';
 
 import { profilePic } from '../images';
 import Header from './section/Header';
-import { DataProps } from '../util/interfaces';
+import { SectionObj } from '../util/interfaces';
 
 interface Props {
 	isMobile?: boolean;
-	data?: DataProps;
+	data?: SectionObj;
 }
 
 const ProfileWrapper = styled.div`
@@ -60,16 +60,10 @@ const Subtitle = styled.div`
 
 const Profile = (props: Props) => {
   const { isMobile } = props;
-  console.log(props)
 
-  const data: DataProps = props.data;
-  console.log(data)
-	// const { title, icon, subtitle, text } = data;
-
-	const title= 'test'
-	const icon = ' test'
-	const text=['test']
-	const subtitle= ' test'
+  const data: SectionObj | undefined= props.data;
+  
+	const { title, icon, subtitle, text } = data;
 
 	return (
 		<ProfileWrapper>

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import SkillsColumn from './SkillsColumn';
 import { skillsArray } from '../util/data';
-import { DataProps } from '../util/interfaces'
+import { SkillsObj } from '../util/interfaces'
 
 interface Props {
 	isMobile: boolean;
@@ -21,7 +21,7 @@ const SkillsWidget = styled.div<Props>`
 	${props =>
 		props.isMobile &&
 		css`
-			padding-bottom: 75%;
+			padding-bottom: 50%;
 		`}
 `;
 
@@ -52,6 +52,7 @@ const SkillsSectionTwo = styled.div<Props>`
 			grid-column: 1 / 1;
 			grid-row: 2 / 2;
 			border-top: 0.5px solid #dcdcdc;
+      padding-top: 10%;
 		`}
 `;
 
@@ -64,13 +65,13 @@ const SkillsSectionThree = styled.div<Props>`
 			grid-column: 1 / 1;
 			grid-row: 3 / 3;
 			border-top: 0.5px solid #dcdcdc;
+      padding-top: 10%;
 		`}
 `;
 
 const Skills = (props: Props) => {
 	const { isMobile } = props;
-  const skills: Array<DataProps> = skillsArray || [];
-  
+  const skills: Array<SkillsObj> = skillsArray;
 	return (
 		<>
 			<SkillsHeader className="skills-header">So What Do I Do?</SkillsHeader>
